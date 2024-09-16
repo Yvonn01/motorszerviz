@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Névtelen-removebg-preview.png" type="image/ico" />
+    <title>Dez Garázs</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container">
+     
+            <a class="navbar-brand" href="#">Dez Garázs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Kezdőlap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="szolgaltatas.html">Szolgáltatások</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arak.html">Árak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/motor6.jpg" id="kezdokep" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Gyors és Megbízható Szolgáltatás</h1>
+                        <p>Rövid határidővel, kedvező áron</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/motor3.jpg" id="kezdokep" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Széles körű szolgáltatások</h1>
+                        
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/motor.jpg" id="kezdokep" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Professzionális Gumiszervíz</h1>
+                        <p>Minőségi szolgáltatások a motorodnak</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Előző</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Következő</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services szolgaltatasok text-center py-5 ">
+        <div class="container">
+            <h2 class="mb-5">Szolgáltatásaink</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 service-item">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Gumiabroncs Csere</h5>
+                            <p class="card-text"><img class="icons" src="img/ikon3.svg" alt="ikon" title="ikon"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Kerék Centírozás</h5>
+                            <p class="card-text"><img class="icons" src="img/ikon2.svg" alt="ikon" title="ikon"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Motor karbantartás</h5>
+                            <p class="card-text"><img class="icons" src="img/ikon1.svg" alt="ikon" title="ikon"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <a href="szolgaltatas.html"> <button type="button" class="btn btn-outline-light center">További Szolgáltatások</button></a>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="info-cards text-center py-5">
+        <div class="container">
+            <h2 class="mb-5">Bízd szakemberre a motorod!</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 mb-4">
+                    <div class="card h-100 wide-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bízd szakemberre a gumicserét</h5>
+                            <p class="card-text">Szenvedélyünk a motorozás, és tudjuk, mennyire fontos a 
+                                megfelelő gumiabroncs a biztonságos és élvezetes motorozáshoz.
+                                 Szervizünkben elsődleges célunk, hogy motorod számára a
+                                  legjobb minőségű szolgáltatást nyújtsuk, legyen
+                                   szó új gumiabroncsok beszerzéséről, cseréjéről vagy motorod javításáról.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Motor Gumi Szervíz. Minden jog fenntartva.</p>
+            <p>Telefon: +36 20 511 0107 | Cím: 6726 Szeged, Főfasor 160.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
