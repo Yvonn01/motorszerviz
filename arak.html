@@ -18,6 +18,7 @@
             
 
         }
+
     
         h1 {
             margin-bottom: 0.5rem;
@@ -44,6 +45,24 @@
         .lablec{
             margin-top: 120px;
         }
+
+        .info-icon{
+    cursor: pointer;
+    color: #0d6efd;
+    font-size: 18px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+.info-icon:hover{
+    color: #084298;
+}
+footer {
+  
+    
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);}
+        
     </style>
 </head>
 <body>
@@ -89,59 +108,180 @@
                     <th>Szolgáltatás</th>
                     
                     <th>Ár</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Gumicsere és centírozás (első kerék)</td>
+                    <td><b>Szervíz óradíj</td>
                     
-                    <td>8,000 Ft</td>
-                </tr>
-                <tr>
-                    <td>Gumicsere és centírozás (hátsó kerék)</td>
+                    <td>8,000 Ft/óra (bruttó)</td>
+                    <td></td>
+                    <td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title=" A munkadíjakat nagyban befolyásolja, hogy mennyit szükséges bontani a
+                        motoron. (Pl: bukócsövek, burkolatok, egyedi beépített alkatrészek le-és
+                        felszerelése).
+                        
+                        Diagnosztika számos motortípusnál:
+                        - Hibakód olvasás
+                        - Hibakód törlés
+                        - BMW ESA beszabályzás
+                        - tps ellenőrzés">
+                        ⓘ
+                    </span></td>
                    
-                    <td>10,000 Ft</td>
                 </tr>
                 <tr>
-                    <td>Defekt javítás (tubeless gumi)</td>
-                    
-                    <td>5,000 Ft</td>
+                    <td><b>Kormánycsapágy csere</td>
+                        
+                    <td>Munkadíj: 25 - 35 000 Ft</td>
+                        <td> Csapágy ára: kb. 10 000 – 20 000 Ft</td>
+                        <td><span 
+                            class="info-icon"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="A kormánycsapágy kopása rontja a motor irányíthatóságát. Ellenőrzéskor a motort fel kell
+                            emelni és a kormányt elforgatva érezhető az esetleges rendellenesség.
+
+                            A munkafolyamat tartalmazza:
+                            - első fék, kerék, sárvédő, burkolatok, teleszkópok és villahidak kiszerelését
+                            - csapágy cseréjét és zsírzását
+                            - minden alkatrész visszaszerelését">
+                            ⓘ
+                        </span></td>
+                    </tr>
+                <tr>
+                    <td><b>Olajcsere</td>
+                        
+                    <td>Munkadíj (csupasz motor esetén): 10 000 Ft</td>
+                    <td></td><td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="A motor élettartamát jelentősen befolyásolja a hidegindítás és a megfelelő olaj kiválasztása.
+                        Olajcsere alkalmával minden esetben szűrő cserét is javaslok.">
+                        ⓘ
+                    </span></td>
                 </tr>
                 <tr>
-                    <td>Defekt javítás (belső gumis)</td>
-                    
-                    <td>6,500 Ft</td>
+                    <td><b>Szekunder lánc csere</td>
+                        
+                    <td>Munkadíj: 20 000 Ft</td>
+                    <td></td><td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="A láncot rendszeresen tisztítani és kenni kell. Általában 30 000 km körül válik szükségessé a
+                        csere. Lánccsere esetén a lánckerekeket is érdemes cserélni.">
+                        ⓘ
+                    </span></td>
                 </tr>
                 <tr>
-                    <td>Gumi szelep csere</td>
-                    
-                    <td>1,500 Ft</td>
+                    <td><b>Karburátor szerviz</td>
+                    <td>4 hengeres karburátor: 40-80 000 Ft</td>
+                    <td> 1 hengeres karburátor: kb. 15 000 Ft</td>
+                    <td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Keverékképzési problémák (rossz indítás, alapjárati gondok, gázreakció hibák) gyakran a
+                        karburátor vagy az injektor szennyeződése miatt jelentkeznek.
+
+                        Szolgáltatás tartalma:
+                        - tisztítás
+                        - beállítás
+                        - több hengeres motor esetén szinkronizálás">
+                        ⓘ
+                    </span></td>
                 </tr>
                 <tr>
-                    <td>Gumiabroncs nyomás ellenőrzés és beállítás</td>
-                    
-                    <td>2,000 Ft</td>
+                    <td><b>Szelephézag ellenőrzés és állítás</b></td>
+                <td></td><td></td><td><span 
+                    class="info-icon"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="A szelephézag ellenőrzése a meghatározott üzemóra, vagy futásteljesítmény elteltével elengedhetetlenül szükséges. A használat során akár csökken, akár nő a szelephézag a motorkárosodását okozhatja. A szelephézag ellenőrzésekor a vezérlés ellenőrzését is elvégzem, értem ez alatt a láncos vezérlés esetén a láncnyúlást, láncvezetők épségét, láncfeszítő patron ellenőrzését.">
+                    ⓘ
+                </span></td>
                 </tr>
                 <tr>
-                    <td>Kerék centírozás</td>
-                    
-                    <td>2,000 Ft</td>
+                    <td>1 hengeres, 2 szelepes</td>
+                <td>állítócsavaros: 15 000 Ft</td>
+                <td>korongos: 20 000 Ft</td><td></td>
                 </tr>
                 <tr>
-                    <td>Szezonális gumicsere</td>
+                    <td>1 hengeres, 4 szelepes</td>
+                <td>állítócsavaros: 20 000 Ft</td>
+                <td>korongos: 31 000 Ft</td><td></td>
+                </tr>
+                <tr>
+                    <td>Soros 4 hengeres</td>
+                <td>állítócsavaros: 20 000 Ft</td>
+                <td>korongos: 35 000 Ft</td><td></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Fékfolyadék csere</td>
                     
-                    <td>2,000 Ft</td>
+                    <td>kb. 6 000 Ft / munkahenger</td>
+                    <td>Speciális fékrendszereknél egyedi árazás.</td><td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="A fékfolyadék 2 évente cserélendő, mert nedvességet köt meg, ami a fékrendszerben lévő
+                        korróziót növeli, csökkenti a fékfolyadék forráspontját, mellyel intenzív fékezés esetén
+                        veszélyezteti a biztonságos fékhatást.">
+                        ⓘ
+                    </span></td>
+                </tr>
+                <tr>
+                    <td><b>Teleszkóp szimering csere   </td>
+                    
+                    <td>30 000 Ft</td><td></td><td><span 
+                        class="info-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="A szimering meghibásodása olajszivárgást okozhat, ami a fékbetétekre kerülve
+                        balesetveszélyes, a lengéscsillapítás ezáltal az úttartás romlik.">
+                        ⓘ
+                    </span></td>
+                </tr>
+                <tr><td>Ehhez hozzáadódik:</td>
+                    <td>teleszkóp olaj</td>
+                    <td>szimering, porvédő</td>
+                    <td>szerelési segédanyagok</td></tr>
+                <tr>
+                    <td><b>Gumicsere és centírozás
+                     </td>
+                    <td>Első kerék: 8 000 Ft</td>
+                     <td>Hátsó kerék: 10.000 Ft</td>
+                    <td>Chopper esetén egyedi ajánlat.</td>
                 </tr>
             </tbody>
         </table>
     </div>
    
+    
+</head>
 
+
+<script>
+    // Bootstrap tooltip aktiválása
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
+        new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+</script>
     <!-- Footer -->
-    <footer class="footer lablec text-white text-center py-4 ">
+    <footer class="footer text-white text-center py-4">
         <div class="container">
-            <p>&copy; 2024 Motor Gumi Szervíz. Minden jog fenntartva.</p>
-            <p>Telefon: +36 20 511 0107 | Cím: 6726 Szeged, Főfasor 160.</p>
+            <p>&copy; 2026 Motor Szerviz. Minden jog fenntartva.</p>
+            <p>Telefon: +36 20 511 0107 | Cím: 6726 Szeged, Főfasor 34.</p>
         </div>
     </footer>
 
