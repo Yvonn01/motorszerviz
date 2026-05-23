@@ -1,78 +1,152 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Névtelen-removebg-preview.png" type="image/ico" />
     <title>Dez Garázs</title> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
-         background-image: url('img/sisak1.jpg');
-         background-repeat: no-repeat;
-         background-size: cover;
-        }
-        .cim{
-            color:rgb(255, 255, 255);
-            text-shadow: 0px 2px 4px #16151565;
-            
 
-        }
+/* ===== ALAP ===== */
 
-    
-        h1 {
-            margin-bottom: 0.5rem;
-        }
-        .underline {
-            width: 50px;
-            height: 3px;
-            background-color: #ffffff;
-           margin: 0 auto 1rem;
-        } 
-        table tr:hover td {
-            background-color: #1b1b1b52;
-        }
+body{
+    background-image: url('img/sisak1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 90px;
+}
 
-        .table {
-            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px; /* minimális lekerekített sarkok */
-            overflow: hidden;
-            background-color: #ffffffb1 !important;
-            margin-bottom: 40px;
-            
-        }
+/* ===== NAVBAR ===== */
 
-        .lablec{
-            margin-top: 120px;
-        }
 
-        .info-icon{
+
+
+/* ===== TÁBLÁZAT ===== */
+
+.table-responsive{
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+.table{
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffffb1 !important;
+    margin-bottom: 0;
+    backdrop-filter: blur(6px);
+    width: 100%;
+}
+
+table tr:hover td{
+    background-color: #1b1b1b52;
+}
+
+.table th,
+.table td{
+    vertical-align: middle;
+}
+
+/* ===== TOOLTIP IKON ===== */
+
+.info-icon{
     cursor: pointer;
     color: #0d6efd;
     font-size: 18px;
     margin-left: 8px;
     font-weight: bold;
+    display: inline-block;
+    padding: 5px;
 }
 
 .info-icon:hover{
     color: #084298;
 }
-footer {
-  
-    
+
+/* ===== FOOTER ===== */
+
+footer{
     background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(4px);}
-        
-    </style>
+    backdrop-filter: blur(4px);
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer p{
+    margin-bottom: 5px;
+}
+
+/* ===== MOBIL NÉZET ===== */
+
+@media (max-width: 992px){
+
+    body{
+        padding-top: 80px;
+        background-attachment: scroll;
+    }
+
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .table{
+        font-size: 14px;
+        min-width: 750px;
+    }
+
+    .table th,
+    .table td{
+        padding: 10px;
+        white-space: nowrap;
+    }
+
+    
+
+    footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    
+
+    .info-icon{
+        font-size: 16px;
+    }
+}
+
+/* ===== KIS TELEFONOK ===== */
+
+@media (max-width: 576px){
+
+    .table{
+        font-size: 13px;
+        min-width: 680px;
+    }
+
+    .table th,
+    .table td{
+        padding: 8px;
+    }
+
+   
+}
+
+</style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg  fixed-top">
+  <nav class="navbar navbar-expand-lg  fixed-top">
         <div class="container">
      
             <a class="navbar-brand" href="#">Árlista</a>
-         
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -88,6 +162,9 @@ footer {
                         <a class="nav-link" href="arak.html">Árak</a>
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link" href="galery.html">Galéria</a>
+                </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
                     </li>
                 </ul>
@@ -101,184 +178,218 @@ footer {
 
     <!-- Price List -->
     
-    <div class="container mt-5">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Szolgáltatás</th>
-                    
-                    <th>Ár</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>Szervíz óradíj</td>
-                    
-                    <td>8,000 Ft/óra (bruttó)</td>
-                    <td></td>
-                    <td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title=" A munkadíjakat nagyban befolyásolja, hogy mennyit szükséges bontani a
-                        motoron. (Pl: bukócsövek, burkolatok, egyedi beépített alkatrészek le-és
-                        felszerelése).
-                        
-                        Diagnosztika számos motortípusnál:
-                        - Hibakód olvasás
-                        - Hibakód törlés
-                        - BMW ESA beszabályzás
-                        - tps ellenőrzés">
-                        ⓘ
-                    </span></td>
-                   
-                </tr>
-                <tr>
-                    <td><b>Kormánycsapágy csere</td>
-                        
-                    <td>Munkadíj: 25 - 35 000 Ft</td>
-                        <td> Csapágy ára: kb. 10 000 – 20 000 Ft</td>
-                        <td><span 
-                            class="info-icon"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="A kormánycsapágy kopása rontja a motor irányíthatóságát. Ellenőrzéskor a motort fel kell
-                            emelni és a kormányt elforgatva érezhető az esetleges rendellenesség.
+     <div class="container mt-4">
 
-                            A munkafolyamat tartalmazza:
-                            - első fék, kerék, sárvédő, burkolatok, teleszkópok és villahidak kiszerelését
-                            - csapágy cseréjét és zsírzását
-                            - minden alkatrész visszaszerelését">
-                            ⓘ
-                        </span></td>
+        <div class="table-responsive">
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>Szolgáltatás</th>
+                        <th>Ár</th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                <tr>
-                    <td><b>Olajcsere</td>
-                        
-                    <td>Munkadíj (csupasz motor esetén): 10 000 Ft</td>
-                    <td></td><td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="A motor élettartamát jelentősen befolyásolja a hidegindítás és a megfelelő olaj kiválasztása.
-                        Olajcsere alkalmával minden esetben szűrő cserét is javaslok.">
-                        ⓘ
-                    </span></td>
-                </tr>
-                <tr>
-                    <td><b>Szekunder lánc csere</td>
-                        
-                    <td>Munkadíj: 20 000 Ft</td>
-                    <td></td><td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="A láncot rendszeresen tisztítani és kenni kell. Általában 30 000 km körül válik szükségessé a
-                        csere. Lánccsere esetén a lánckerekeket is érdemes cserélni.">
-                        ⓘ
-                    </span></td>
-                </tr>
-                <tr>
-                    <td><b>Karburátor szerviz</td>
-                    <td>4 hengeres karburátor: 40-80 000 Ft</td>
-                    <td> 1 hengeres karburátor: kb. 15 000 Ft</td>
-                    <td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Keverékképzési problémák (rossz indítás, alapjárati gondok, gázreakció hibák) gyakran a
-                        karburátor vagy az injektor szennyeződése miatt jelentkeznek.
+                </thead>
 
-                        Szolgáltatás tartalma:
-                        - tisztítás
-                        - beállítás
-                        - több hengeres motor esetén szinkronizálás">
-                        ⓘ
-                    </span></td>
-                </tr>
-                <tr>
-                    <td><b>Szelephézag ellenőrzés és állítás</b></td>
-                <td></td><td></td><td><span 
-                    class="info-icon"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="A szelephézag ellenőrzése a meghatározott üzemóra, vagy futásteljesítmény elteltével elengedhetetlenül szükséges. A használat során akár csökken, akár nő a szelephézag a motorkárosodását okozhatja. A szelephézag ellenőrzésekor a vezérlés ellenőrzését is elvégzem, értem ez alatt a láncos vezérlés esetén a láncnyúlást, láncvezetők épségét, láncfeszítő patron ellenőrzését.">
-                    ⓘ
-                </span></td>
-                </tr>
-                <tr>
-                    <td>1 hengeres, 2 szelepes</td>
-                <td>állítócsavaros: 15 000 Ft</td>
-                <td>korongos: 20 000 Ft</td><td></td>
-                </tr>
-                <tr>
-                    <td>1 hengeres, 4 szelepes</td>
-                <td>állítócsavaros: 20 000 Ft</td>
-                <td>korongos: 31 000 Ft</td><td></td>
-                </tr>
-                <tr>
-                    <td>Soros 4 hengeres</td>
-                <td>állítócsavaros: 20 000 Ft</td>
-                <td>korongos: 35 000 Ft</td><td></td>
-                </tr>
-                
-                <tr>
-                    <td><b>Fékfolyadék csere</td>
-                    
-                    <td>kb. 6 000 Ft / munkahenger</td>
-                    <td>Speciális fékrendszereknél egyedi árazás.</td><td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="A fékfolyadék 2 évente cserélendő, mert nedvességet köt meg, ami a fékrendszerben lévő
-                        korróziót növeli, csökkenti a fékfolyadék forráspontját, mellyel intenzív fékezés esetén
-                        veszélyezteti a biztonságos fékhatást.">
-                        ⓘ
-                    </span></td>
-                </tr>
-                <tr>
-                    <td><b>Teleszkóp szimering csere   </td>
-                    
-                    <td>30 000 Ft</td><td></td><td><span 
-                        class="info-icon"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="A szimering meghibásodása olajszivárgást okozhat, ami a fékbetétekre kerülve
-                        balesetveszélyes, a lengéscsillapítás ezáltal az úttartás romlik.">
-                        ⓘ
-                    </span></td>
-                </tr>
-                <tr><td>Ehhez hozzáadódik:</td>
-                    <td>teleszkóp olaj</td>
-                    <td>szimering, porvédő</td>
-                    <td>szerelési segédanyagok</td></tr>
-                <tr>
-                    <td><b>Gumicsere és centírozás
-                     </td>
-                    <td>Első kerék: 8 000 Ft</td>
-                     <td>Hátsó kerék: 10.000 Ft</td>
-                    <td>Chopper esetén egyedi ajánlat.</td>
-                </tr>
-            </tbody>
-        </table>
+                <tbody>
+
+                    <tr>
+                        <td><b>Szervíz óradíj</b></td>
+
+                        <td>8,000 Ft/óra (bruttó)</td>
+
+                        <td></td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A munkadíjakat nagyban befolyásolja, hogy mennyit szükséges bontani a motoron. (Pl: bukócsövek, burkolatok, egyedi beépített alkatrészek le-és felszerelése). Diagnosztika számos motortípusnál: Hibakód olvasás, Hibakód törlés, BMW ESA beszabályzás, TPS ellenőrzés">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Kormánycsapágy csere</b></td>
+
+                        <td>Munkadíj: 25 - 35 000 Ft</td>
+
+                        <td>Csapágy ára: kb. 10 000 – 20 000 Ft</td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A kormánycsapágy kopása rontja a motor irányíthatóságát. A munkafolyamat tartalmazza a kiszerelést, csapágy cserét és visszaszerelést.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Olajcsere</b></td>
+
+                        <td>Munkadíj (csupasz motor esetén): 10 000 Ft</td>
+
+                        <td></td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Olajcsere alkalmával minden esetben szűrő cserét is javaslok.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Szekunder lánc csere</b></td>
+
+                        <td>Munkadíj: 20 000 Ft</td>
+
+                        <td></td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A láncot rendszeresen tisztítani és kenni kell.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Karburátor szerviz</b></td>
+
+                        <td>4 hengeres karburátor: 40-80 000 Ft</td>
+
+                        <td>1 hengeres karburátor: kb. 15 000 Ft</td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Tisztítás, beállítás és szinkronizálás több hengeres motor esetén.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Szelephézag ellenőrzés és állítás</b></td>
+
+                        <td></td>
+
+                        <td></td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A szelephézag ellenőrzése elengedhetetlen a motor megfelelő működéséhez.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>1 hengeres, 2 szelepes</td>
+                        <td>állítócsavaros: 15 000 Ft</td>
+                        <td>korongos: 20 000 Ft</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>1 hengeres, 4 szelepes</td>
+                        <td>állítócsavaros: 20 000 Ft</td>
+                        <td>korongos: 31 000 Ft</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>Soros 4 hengeres</td>
+                        <td>állítócsavaros: 20 000 Ft</td>
+                        <td>korongos: 35 000 Ft</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Fékfolyadék csere</b></td>
+
+                        <td>kb. 6 000 Ft / munkahenger</td>
+
+                        <td>Speciális fékrendszereknél egyedi árazás.</td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A fékfolyadék 2 évente cserélendő.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Teleszkóp szimering csere</b></td>
+
+                        <td>30 000 Ft</td>
+
+                        <td></td>
+
+                        <td>
+                            <span
+                                class="info-icon"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="A szimering meghibásodása olajszivárgást okozhat.">
+                                ⓘ
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Ehhez hozzáadódik:</td>
+                        <td>teleszkóp olaj</td>
+                        <td>szimering, porvédő</td>
+                        <td>szerelési segédanyagok</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Gumicsere és centírozás</b></td>
+
+                        <td>Első kerék: 8 000 Ft</td>
+
+                        <td>Hátsó kerék: 10.000 Ft</td>
+
+                        <td>Chopper esetén egyedi ajánlat.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
     </div>
    
     
 </head>
 
-
-<script>
-    // Bootstrap tooltip aktiválása
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
-        new bootstrap.Tooltip(tooltipTriggerEl)
-    );
-</script>
     <!-- Footer -->
-    <footer class="footer text-white text-center py-4">
+   <footer class="footer text-white text-center py-4">
         <div class="container">
             <p>&copy; 2026 Motor Szerviz. Minden jog fenntartva.</p>
             <p>Telefon: +36 20 511 0107 | Cím: 6726 Szeged, Főfasor 34.</p>
@@ -286,8 +397,31 @@ footer {
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-</body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            if (navbarCollapse.classList.contains("show")) {
+                new bootstrap.Collapse(navbarCollapse).hide();
+            }
+        });
+    });
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+    tooltipTriggerList.forEach(function (el) {
+        new bootstrap.Tooltip(el, {
+            trigger: 'click'
+        });
+    });
+
+});
+</script>
+    </body>
 </html>
